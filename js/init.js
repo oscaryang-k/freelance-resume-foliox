@@ -15,9 +15,10 @@ jQuery(document).ready(function () {
   foliox_tm_owl_carousel();
   foliox_tm_totop();
   foliox_tm_down();
-  jQuery(window).load("body", function () {
+
+  setTimeout(() => {
     foliox_tm_my_load();
-  });
+  }, 200);
   jQuery(window).on("scroll", function () {
     foliox_tm_progress_line();
   });
@@ -178,7 +179,6 @@ function progress_by_frenify(wrapper) {
   element.each(function () {
     var pWrap = jQuery(this);
     pWrap.find(".number").css({ right: "100%" });
-    console.log(pWrap.find(".number").length);
     pWrap.waypoint({
       handler: function () {
         tdProgress(pWrap);

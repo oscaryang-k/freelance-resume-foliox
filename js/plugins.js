@@ -8455,12 +8455,12 @@ var _typeof =
             s = t(this).outerHeight(),
             e = t(this).offset().left,
             n = t(this).offset().top,
-            a = (this.mousePositions.x - e) / i,
-            r = (this.mousePositions.y - n) / s,
+            a = (this.mousePositions?.x - e) / i,
+            r = (this.mousePositions?.y - n) / s,
             o = (this.settings.maxTilt / 2 - a * this.settings.maxTilt).toFixed(2),
             l = (r * this.settings.maxTilt - this.settings.maxTilt / 2).toFixed(2),
             h =
-              Math.atan2(this.mousePositions.x - (e + i / 2), -(this.mousePositions.y - (n + s / 2))) * (180 / Math.PI);
+              Math.atan2(this.mousePositions?.x - (e + i / 2), -(this.mousePositions?.y - (n + s / 2))) * (180 / Math.PI);
           return { tiltX: o, tiltY: l, percentageX: 100 * a, percentageY: 100 * r, angle: h };
         },
         g = function () {
