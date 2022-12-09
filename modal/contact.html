@@ -1,0 +1,1 @@
+<span class='contact_error'>* Invalid email *</span>

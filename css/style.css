@@ -1,0 +1,2429 @@
+@charset "utf-8";
+
+/*	Copyright (c) 2022 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+
+
+01)	FOLIOX BASE
+02) FOLIOX MOBILE MENU
+03) FOLIOX HEADER
+04) FOLIOX HERO
+05) FOLIOX FEATURES
+06) FOLIOX ABOUT
+07) FOLIOX COUNTER
+08) FOLIOX SKILLS
+09) FOLIOX SERVICE
+10) FOLIOX RESUME
+11) FOLIOX PORTFOLIO
+12) FOLIOX TESTIMONIALS
+13) FOLIOX PARTNERS
+14) FOLIOX NEWS
+15) FOLIOX CONTACT
+16) FOLIOX SUBSCRIBE
+17) FOLIOX COPYRIGHT
+18) FOLIOX MAGIC CURSOR
+19) FOLIOX TOTOP
+20) FOLIOX MEDIA QUERIES (FOR SMALL DEVICES)
+
+
+/*---------------------------------------------------*/
+/*	01) FOLIOX BASE
+/*---------------------------------------------------*/
+
+a{
+	text-decoration: none;
+}
+:root{
+    --main-color: #b4afc6;
+    --extra-color: #00c0ff;
+    --font-family-main: 'Open Sans', sans-serif;
+    --font-family-extra: 'Poppins', sans-serif;
+}
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	overflow-x: hidden;
+	width: 100%;
+	font-family: var(--font-family-main);
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 0px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #1e1345;
+	color: var(--main-color);
+	background-image: url(../img/hero/1.jpg);
+}
+
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: var(--main-color);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: var(--main-color);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: var(--main-color);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: var(--main-color);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--main-color);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: var(--main-color);
+}
+ul{
+	margin: 0px;
+	list-style-type: none;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body{
+  scrollbar-width: thin;
+  scrollbar-color: var(--extra-color) #1e1345;
+}
+body:-webkit-scrollbar-track {
+  background: #1e1345;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--extra-color);
+  border-radius: 6px;
+  border: 3px solid #1e1345;
+}
+
+.container{
+	max-width: 1400px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	padding:0px 40px;
+	position:relative;
+	clear:both;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:600;
+	line-height: 1.3;
+	font-family: var(--font-family-extra);
+	color: #fff;
+}
+
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+.foliox_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.foliox_tm_all_wrap,
+.foliox_tm_all_wrap *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+}
+#preloader:before,
+#preloader:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+#preloader:after{
+    left: auto;
+    right: 0;
+}
+#preloader .loader_line{
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+.loader_line:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #000;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+.loader_line:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms;
+}
+
+@keyframes lineheight{
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes lineround{
+    0%{
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100%{
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+}
+
+/*hiding all*/
+.preloaded .loader_line:after{
+    opacity: 0;
+}
+.preloaded  .loader_line{
+    opacity: 0;
+    height: 100%!important;
+}
+.preloaded:before,
+.preloaded:after{
+    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+@keyframes preloadedzero{
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+.foliox_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+
+/*---------------------------------------------------*/
+/*	02) FOLIOX MOBILE MENU
+/*---------------------------------------------------*/
+
+.foliox_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.foliox_tm_mobile_menu .mobile_menu_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #1e1345;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	padding: 10px 20px 10px 20px;
+}
+.hamburger-inner, 
+.hamburger-inner:after, 
+.hamburger-inner:before{
+	background-color: #fff;
+}
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before{
+	background-color: #fff;
+}
+.foliox_tm_mobile_menu .mobile_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.foliox_tm_mobile_menu .mobile_in .logo img{
+	max-width: 120px;
+	max-height: 70px;
+}
+.foliox_tm_mobile_menu .trigger{
+	line-height: 0;
+}
+.foliox_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #1e1345;
+	display: none;
+}
+.foliox_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 40px;
+}
+.foliox_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.foliox_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.foliox_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 0px 0px;
+	font-weight: 500;
+}
+.foliox_tm_mobile_menu .hamburger-inner, 
+.foliox_tm_mobile_menu .hamburger-inner:after, 
+.foliox_tm_mobile_menu .hamburger-inner:before{
+	width: 30px;
+	height: 2px;
+}
+.foliox_tm_mobile_menu .hamburger-box{
+	width: 30px;
+}
+.foliox_tm_mobile_menu .hamburger{
+	padding: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	03) FOLIOX HEADER
+/*---------------------------------------------------*/
+
+.foliox_tm_header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 10;
+	padding: 45px 0px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_header.animate{
+	background-color: #1e1345;
+	padding: 30px 0px;
+}
+.foliox_tm_header .inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.foliox_tm_header .logo img{
+	max-width: 200px;
+	max-height: 80px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_header.animate .logo img{
+	max-width: 160px;
+}
+.foliox_tm_header .details{
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_header .menu ul{
+	margin: 0px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_header .menu ul li{
+	margin: 0px 40px 0px 0px;
+}
+.foliox_tm_header .menu ul li:last-child{
+	margin-right: 0px;
+}
+.foliox_tm_header .menu ul li a{
+	color: #fff;
+	font-family: var(--font-family-extra);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_header .menu ul li a:hover{
+	color: var(--extra-color);
+}
+.foliox_tm_header .menu ul li.current a{
+	color: var(--extra-color);
+}
+.foliox_tm_header .social{
+	position: relative;
+	margin-left: 60px;
+}
+.foliox_tm_header .social:before{
+	position: absolute;
+	content: "|";
+	left: -30px;
+	top: -2px;
+}
+.foliox_tm_header .social ul{
+	margin: 0px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_header .social ul li{
+	margin: 0px 12px 0px 0px;
+}
+.foliox_tm_header .social ul li:last-child{
+	margin-right: 0px;
+}
+.foliox_tm_header .social ul li a{
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_header .social ul li a:hover{
+	color: var(--extra-color);
+}
+
+/*---------------------------------------------------*/
+/*	04) FOLIOX HERO
+/*---------------------------------------------------*/
+
+.foliox_tm_hero{
+	width: 100%;
+	height: 100vh;
+	float: left;
+	position: relative;
+}
+.foliox_tm_hero .content{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_hero .left{
+	width:50%;
+}
+.foliox_tm_hero .name{
+	font-size: 120px;
+	line-height: 1.1;
+	margin-bottom: 25px;
+}
+.foliox_tm_hero .name span{
+	color: var(--extra-color);
+}
+.foliox_tm_hero .job{
+	color: #fff;
+	font-size: 23px;
+	font-weight: 500;
+	font-family: var(--font-family-extra);
+	margin-bottom: 50px;
+}
+.foliox_tm_button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_button a{
+	font-family: var(--font-family-extra);
+	color: #fff;
+	display: inline-block;
+	background-color: var(--extra-color);
+	padding: 18px 43px;
+	border-radius: 50px;
+	overflow: hidden;
+	position: relative;
+}
+.foliox_tm_button a span{
+	position: relative;
+	z-index: 2;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_button a:before{
+	position: absolute;
+	content: "";
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	top: -10px;
+	background-color: #fff;
+	transform: translateY(100%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_button a:hover:before{
+	transform: translateY(0);
+}
+.foliox_tm_button a:hover span{
+	color: #000;
+}
+.foliox_tm_hero .right{
+	width:50%;
+	padding-left: 80px;
+}
+.foliox_tm_hero .right img{
+	max-width: 600px;
+	max-height: 600px;
+}
+
+/*---------------------------------------------------*/
+/*	05) FOLIOX FEATURES
+/*---------------------------------------------------*/
+
+.foliox_tm_features{
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-bottom: 113px;
+}
+.foliox_tm_features .list{
+	width: 100%;
+	height: auto;
+	float: left;
+	position: relative;
+}
+.foliox_tm_features .list ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foliox_tm_features .list ul li{
+	margin: 0px 0px 50px 0px;
+	padding-left: 25px;
+	width: 33.3333%;
+}
+.foliox_tm_features .list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #3a2b71;
+	border-radius: 10px;
+	padding: 60px;
+}
+.foliox_tm_features .list ul li .svg{
+	width: 65px;
+	height: 65px;
+	margin-bottom: 30px;
+	color: var(--extra-color);
+}
+.foliox_tm_features .list ul li .title{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+/*---------------------------------------------------*/
+/*	06) FOLIOX ABOUT
+/*---------------------------------------------------*/
+
+.foliox_tm_main_title{
+	width: 100%;
+	max-width: 650px;
+	height: auto;
+	clear: both;
+	margin: 0px auto;
+	text-align: center;
+}
+.foliox_tm_main_title span{
+	font-size: 21px;
+	font-family: var(--font-family-extra);
+	color: var(--extra-color);
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.foliox_tm_main_title h3{
+	font-size: 48px;
+}
+.foliox_tm_about{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 245px;
+}
+.foliox_tm_about .wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-top: 75px;
+}
+.foliox_tm_about .left{
+	width: 50%;
+	position: relative;
+}
+.foliox_tm_about .big_image{
+	float: right;
+	position: relative;
+}
+.foliox_tm_about .big_image img{
+	max-width: 425px;
+	max-height: 510px;
+}
+.foliox_tm_about .small_image{
+	position: absolute;
+	z-index: 1;
+	right: 100%;
+	top: 100%;
+	margin-top: -180px;
+	margin-right: -100px;
+}
+.foliox_tm_about .small_image .in{
+	position: relative;
+}
+.foliox_tm_about .small_image .in img{
+	position: relative;
+	opacity: 0;
+	min-width: 337px;
+	max-width: 337px;
+}
+.foliox_tm_about .small_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+}
+.foliox_tm_about .badge{
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	position: absolute;
+	background-color: var(--extra-color);
+	border-radius: 10px;
+	top: 160px;
+	right: 100%;
+	margin-right: 45px;
+}
+.foliox_tm_about .badge .svg{
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.foliox_tm_about .experience{
+	position: absolute;
+	top: 100%;
+	left: 138px;
+	margin-top: 35px;
+}
+.foliox_tm_about .experience .inner{
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+}
+.foliox_tm_about .experience .inner:before{
+	width: 10px;
+	height: 110px;
+	position: absolute;
+	content: "";
+	background-color: var(--extra-color);
+	left: 0px;
+}
+.foliox_tm_about .experience .inner h3{
+	font-size: 72px;
+}
+.foliox_tm_about .experience .inner span{
+	font-size: 22px;
+	font-family: var(--font-family-extra);
+	color: #fff;
+	line-height: 32px;
+	padding-left: 20px;
+}
+.foliox_tm_about .right{
+	width: 50%;
+	padding-left: 90px;
+	position: relative;
+	top: 30px;
+}
+.foliox_tm_about .right .title{
+	font-size: 30px;
+	margin-bottom: 35px;
+}
+.foliox_tm_about .right .list{
+	width: 100%;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #625a7d;
+	margin-top: 32px;
+	margin-bottom: 40px;
+}
+.foliox_tm_about .right .list > ul{
+	margin: -2px -10px -2px -2px;
+    list-style-type: none;
+    padding-top: 2px;
+    float: left;
+    padding-left: 2px;
+    min-width: calc(100% + 12px);
+} 
+.foliox_tm_about .right .list > ul > li{
+	margin: 0px;
+    float: left;
+    width: 50%;
+    border: 2px solid #625a7d;
+    position: relative;
+    margin-top: -2px;
+    margin-left: -2px;
+    overflow: hidden;
+} 
+.foliox_tm_about .right .item{
+	margin: 0px;
+	list-style-type: none;
+	padding: 25px 35px;
+}
+.foliox_tm_about .right .item li{
+	margin: 0px 0px 11px 0px;
+}
+.foliox_tm_about .right .item li:last-child{
+	margin-bottom: 0px;
+}
+.foliox_tm_about .right .item li span{
+	font-family: var(--font-family-extra);
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	display: inline-block;
+}
+.foliox_tm_about .right .item li p{
+	font-size: 16px;
+}
+.foliox_tm_about .right .item li a{
+	color: var(--main-color);
+}
+.foliox_tm_about .foliox_tm_button a{
+	padding: 13px 43px;
+}
+
+/*---------------------------------------------------*/
+/*	07) FOLIOX COUNTER
+/*---------------------------------------------------*/
+
+.foliox_tm_counter{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 115px;
+}
+.foliox_tm_counter .counter_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_counter .counter_list ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foliox_tm_counter .counter_list ul li{
+	margin: 0px 0px 50px 0px;
+	padding-left: 25px;
+	width: 25%;
+}
+.foliox_tm_counter .counter_list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #432d92;
+	border-radius: 10px;
+	padding: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.foliox_tm_counter .counter_list ul li h3{
+	font-size: 60px;
+	color: var(--extra-color);
+}
+.foliox_tm_counter .counter_list ul li .title{
+	font-size: 18px;
+	color: #fff;
+	font-family: var(--font-family-extra);
+	font-weight: 500;
+	display: inline-block;
+	padding-left: 26px;
+}
+
+/*---------------------------------------------------*/
+/*	08) FOLIOX SKILLS
+/*---------------------------------------------------*/
+
+.foliox_tm_skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 163px;
+}
+.foliox_tm_skills .list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-top: 47px;
+}
+.foliox_tm_skills .left{
+	width: 50%;
+	padding-right: 67px;
+}
+.foliox_tm_skills .right{
+	width: 50%;
+	padding-left: 67px;
+}
+.dodo_progress{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 30px;
+	overflow: hidden;
+}
+.progress_inner{
+	width:100%;
+	margin-bottom:37px;
+}
+.progress_inner:last-child{
+	margin-bottom: 0px;
+}
+.progress_inner > span{
+	margin:0px 0px 9px 0px;
+	display:block;
+	text-align:left;
+	position: relative;
+}
+.progress_inner span.label{
+	opacity: 0;
+	transform: translateY(10px);
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: var(--font-family-extra);
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.progress_inner span.label.opened{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.progress_inner span.number{
+	float: right;
+	position: absolute;
+	right: 100%;
+	bottom: -2px;
+	transition: all 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	color: var(--extra-color);
+	font-size: 18px;
+	font-family: var(--font-family-extra);
+}
+.progress_inner .background{
+	background:#e7e5f1;
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:8px;
+	border-radius: 50px;
+}
+.progress_inner .background .bar_in{
+	height:8px;
+	width:0px;
+	overflow:hidden;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	position: relative;
+	top: 0px;
+	background-color: var(--extra-color);
+}
+.progress_inner .background .bar{
+	width:0px;
+	height:100%;
+}
+.progress_inner .background .bar.open{
+	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+
+@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+
+/*---------------------------------------------------*/
+/*	09) FOLIOX SERVICE
+/*---------------------------------------------------*/
+
+.foliox_tm_services{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 110px;
+}
+.foliox_tm_services .list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 70px;
+}
+.foliox_tm_services .list ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foliox_tm_services .list ul li{
+	margin: 0px 0px 25px 0px;
+	padding-left: 25px;
+	width: 33.3333%;
+}
+.foliox_tm_services .list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #3a2b71;
+	border-radius: 10px;
+	text-align: center;
+	padding: 105px 65px 70px 65px;
+}
+.foliox_tm_services .list ul li .icon{
+	display: inline-block;
+	position: relative;
+	width: 65px;
+	height: 65px;
+	border-radius: 100%;
+	background-color: #432d92;
+	margin-bottom: 53px;	
+}
+.foliox_tm_services .list ul li .icon:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 100%;
+	left: 0px;
+	transform: scale(0);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_services .list ul li .list_inner:hover .icon:before{
+	transform: scale(1);
+	background-color: var(--extra-color);
+}
+.foliox_tm_services .list ul li .icon .svg{
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: -50%;
+	left: -40%;
+	color: var(--extra-color);
+	z-index: 2;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_services .list ul li .list_inner:hover .icon .svg{
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 35px;
+	height: 35px;
+}
+.foliox_tm_services .list ul li .title{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+/*---------------------------------------------------*/
+/*	10) FOLIOX RESUME
+/*---------------------------------------------------*/
+
+.foliox_tm_resume{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 155px;
+}
+.foliox_tm_resume .wrapper{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-top: 65px;
+}
+.foliox_tm_resume .left{
+	width: 50%;
+	padding-right: 50px;
+}
+.foliox_tm_resume .right{
+	width: 50%;
+	padding-left: 50px;
+}
+.foliox_tm_resume .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 60px;
+}
+.foliox_tm_resume .title h3{
+	font-size: 36px;
+}
+.resume_list{
+	width: 100%;
+	float: left;
+}
+.resume_list ul{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	float: left;
+}
+.resume_list ul:before{
+	position: absolute;
+	content: "";
+	top: 10px;
+	bottom: 0px;
+	left: 36px;
+	width: 1px;
+	background-color: #5d5e82;
+}
+.resume_list ul li{
+	margin: 0px 0px 50px 0px;
+	width: 100%;
+	float: left;
+}
+.resume_list ul li:last-child{
+	margin-bottom: 0px;
+}
+.resume_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding-left: 107px;
+}
+.resume_list ul li .icon{
+	width: 72px;
+	height: 72px;
+	display: inline-block;
+	border-radius: 100%;
+	background-color: var(--extra-color);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+.resume_list ul li .icon .svg{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+.resume_list .resume_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 18px;
+}
+.resume_list .resume_title h3{
+	font-size: 24px;
+	margin-bottom: 13px;
+}
+.resume_list .resume_title h3 span{
+	font-size: 16px;
+	color: #b4afc6;
+	font-weight: 400;
+	display: inline-block;
+	padding-left: 8px;
+}
+.resume_list .company{
+	font-size: 18px;
+	color: #fff;
+	font-family: var(--extra-color);
+	font-weight: 600;
+}
+
+/*---------------------------------------------------*/
+/*	11) FOLIOX PORTFOLIO
+/*---------------------------------------------------*/
+
+.foliox_tm_portfolio{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 150px;
+}
+.foliox_tm_portfolio .portfolio_filter{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 55px;
+}
+.foliox_tm_portfolio .portfolio_filter ul{
+	margin: 0px;
+}
+.foliox_tm_portfolio .portfolio_filter ul li{
+	margin: 0px 35px 0px 0px;
+	display: inline-block;
+}
+.foliox_tm_portfolio .portfolio_filter ul li:last-child{
+	margin-right: 0px;
+}
+.foliox_tm_portfolio .portfolio_filter ul li a{
+	color: #fff;
+	font-family: var(--font-family-extra);
+	font-weight: 500;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_portfolio .portfolio_filter ul li a.current{
+	color: var(--extra-color);
+}
+.foliox_tm_portfolio .portfolio_filter ul li a:hover{
+	color: var(--extra-color);
+}
+.foliox_tm_portfolio .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_portfolio .portfolio_list ul{
+	margin: 0px 0px 0px -13px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foliox_tm_portfolio .portfolio_list ul li{
+	margin: 0px 0px 13px 0px;
+	padding-left: 13px;
+	width: 33.3333%;
+}
+.foliox_tm_portfolio .portfolio_list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.foliox_tm_portfolio .portfolio_list ul li .image{
+	position: relative;
+}
+.foliox_tm_portfolio .portfolio_list ul li .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.foliox_tm_portfolio .portfolio_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+.foliox_tm_portfolio .portfolio_list ul li .details{
+	position: absolute;
+	z-index: 2;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	background-color: #1e1345;
+	padding: 20px;
+	border-radius: 12px;
+	transform: translateY(125%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_portfolio .portfolio_list ul li .details h3{
+	font-size: 20px;
+	margin-bottom: 2px;
+}
+.foliox_tm_portfolio .portfolio_list ul li .details span{
+	font-size: 16px;
+}
+.foliox_tm_portfolio .portfolio_list ul li .list_inner:hover .details{
+	transform: translateY(0);
+}
+.foliox_tm_full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+}
+.foliox_tm_modalbox{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100vh;
+	z-index: 20;
+	background-color: #140E27;
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_modalbox.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.foliox_tm_modalbox .box_inner{
+	position: absolute;
+	top: 70px;
+	bottom: 70px;
+	width: 968px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #37304E;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	margin-top: -20px;
+	transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_modalbox.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+.foliox_tm_modalbox .close{
+	position: fixed;
+	left: 100%;
+	top: 0px;
+	margin-left: 30px;
+	z-index: 10;
+}
+.foliox_tm_modalbox .close a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+	color: #fff;
+	border:2px solid #fff;
+	border-radius: 10px;
+	position: relative;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_modalbox .close a:hover{
+	border-radius: 100%;
+}
+.foliox_tm_modalbox .close a i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.foliox_tm_modalbox .description_wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 50px;
+	overflow-y: scroll;
+}
+.foliox_tm_modalbox .description_wrap:before{
+	position: fixed;
+	content: "";
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #37304E;
+	z-index: 2;
+}
+.foliox_tm_modalbox .description_wrap:after{
+	position: fixed;
+	content: "";
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #37304E;
+	z-index: 2;
+}
+.foliox_tm_modalbox .description_wrap::-webkit-scrollbar{
+  width: 11px;
+}
+.foliox_tm_modalbox .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: var(--extra-color) #37304E;
+}
+.foliox_tm_modalbox .description_wrap:-webkit-scrollbar-track{
+  background: #37304E;
+}
+.foliox_tm_modalbox .description_wrap::-webkit-scrollbar-thumb{
+  background-color: var(--extra-color);
+  border-radius: 10px;
+  border: 3px solid #37304E;
+}
+.foliox_tm_portfolio .hidden_content{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.foliox_tm_modalbox .popup_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_modalbox .popup_details .top_image{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 37px;
+}
+.foliox_tm_modalbox .popup_details .top_image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.foliox_tm_modalbox .popup_details .top_image .main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 12px;
+}
+.foliox_tm_modalbox .portfolio_main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.foliox_tm_modalbox .portfolio_main_title span{
+	display: inline-block;
+	font-size: 16px;
+}
+.foliox_tm_modalbox .portfolio_main_title h3{
+    font-size: 22px;
+	margin-bottom: 3px;
+}
+.foliox_tm_modalbox .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-bottom: 60px;
+}
+.foliox_tm_modalbox .main_details .textbox{
+	width: 70%;
+	padding-right: 40px;
+}
+.foliox_tm_modalbox .main_details .textbox p{
+	margin-bottom: 15px;
+}
+.foliox_tm_modalbox .main_details .textbox p:last-child{
+	margin-bottom: 0px;
+}
+.foliox_tm_modalbox .main_details .detailbox{
+	width: 30%;
+	padding-left: 40px;
+}
+.foliox_tm_modalbox .main_details .detailbox > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.foliox_tm_modalbox .main_details .detailbox > ul > li{
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+	float: left;
+}
+.foliox_tm_modalbox .main_details .detailbox > ul > li:last-child{
+	margin-bottom: 0px;
+}
+.foliox_tm_modalbox .main_details .detailbox .first{
+    font-weight: 500;
+	font-size: 18px;
+	display: block;
+	color: #fff;
+	font-family: var(--font-family-extra);
+}
+.foliox_tm_modalbox .main_details .detailbox span{
+	font-size: 16px;
+	font-family: var(--font-family-extra);
+}
+.foliox_tm_modalbox .main_details .detailbox span a{
+	text-decoration: none;
+	color: var(--main-color);
+}
+.foliox_tm_modalbox .additional_images{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_modalbox .additional_images ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.foliox_tm_modalbox .additional_images ul li{
+	margin: 0px 0px 30px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 30px;
+}
+.foliox_tm_modalbox .additional_images ul li:nth-child(3n-2){
+	width: 100%;
+}
+.foliox_tm_modalbox .additional_images ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.foliox_tm_modalbox .additional_images ul li .my_image{
+	position: relative;
+}
+.foliox_tm_modalbox .additional_images ul li .my_image img{
+	opacity: 0;
+	min-width: 100%;
+}
+.foliox_tm_modalbox .additional_images ul li .my_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+
+/*---------------------------------------------------*/
+/*	12) FOLIOX TESTIMONIALS
+/*---------------------------------------------------*/
+
+.foliox_tm_testimonials{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 170px;
+}
+.foliox_tm_testimonials .list_wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-top: 50px;
+}
+.foliox_tm_testimonials .in{
+	width: 100%;
+	max-width: 900px;
+	text-align: center;
+	margin: 0px auto;
+}
+.foliox_tm_testimonials .total{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.foliox_tm_testimonials ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.foliox_tm_testimonials ul li{
+	margin: 0px;
+}
+.foliox_tm_testimonials .icon{
+	margin-bottom: 35px;
+}
+.foliox_tm_testimonials .icon .svg{
+	width: 80px;
+	height: 80px;
+	color: var(--extra-color);
+}
+.foliox_tm_testimonials .text{
+	margin-bottom: 60px;
+}
+.foliox_tm_testimonials .text p{
+	font-size: 30px;
+	font-style: italic;
+	line-height: 1.6;
+	color: #fff;
+}
+.foliox_tm_testimonials .short{
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.foliox_tm_testimonials .short .image{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+}
+.foliox_tm_testimonials .short .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+.foliox_tm_testimonials .detail{
+	text-align: left;
+	padding-left: 25px;
+}
+.foliox_tm_testimonials .detail h3{
+	font-size: 24px;
+}
+.foliox_tm_testimonials .detail span{
+	font-size: 16px;
+}
+.foliox_tm_testimonials .owl-theme .owl-dots .owl-dot span{
+	width: 15px;
+	height: 15px;
+	background-color: var(--extra-color);
+	position: relative;
+	margin: 0px 12px;
+}
+.foliox_tm_testimonials .owl-theme .owl-dots .owl-dot span:before{
+	position: absolute;
+	content: "";
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	right: 1px;
+	border-radius: 100%;
+	border: 2px solid #fff;
+	z-index: -1;
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.foliox_tm_testimonials .owl-theme .owl-dots .owl-dot.active span:before{
+	top: -5px;
+	bottom: -5px;
+	left: -5px;
+	right: -5px;
+}
+.foliox_tm_testimonials .owl-theme .owl-nav.disabled+.owl-dots{
+	top: -5px;
+	bottom: -5px;
+	left: -5px;
+	right: -5px;
+	margin-top: 64px;
+}
+
+/*---------------------------------------------------*/
+/*	13) FOLIOX PARTNERS
+/*---------------------------------------------------*/
+
+.foliox_tm_partners{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 160px;
+}
+.foliox_tm_partners .partners_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #432d92;
+	border-radius: 12px;
+	padding: 70px 0px;
+}
+.foliox_tm_partners .partners_list ul{
+	margin: 0px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_partners .partners_list ul li{
+	margin: 0px;
+	list-style-type: none;
+	opacity: .5;
+	text-align: center;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_partners .partners_list ul li:hover{
+	opacity: 1;
+}
+.foliox_tm_partners .partners_list ul li img{
+	max-width: 95%;
+	max-height: 180px;
+} 
+.foliox_tm_partners .owl-carousel .owl-stage{
+	display: flex;
+	align-items: center;
+}
+
+/*---------------------------------------------------*/
+/*	14) FOLIOX NEWS
+/*---------------------------------------------------*/
+
+.foliox_tm_news{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 113px;
+}
+.foliox_tm_news .news_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 70px;
+}
+.foliox_tm_news .news_list ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.foliox_tm_news .news_list ul li{
+	margin: 0px 0px 50px 0px;
+	padding-left: 25px;
+	width: 33.3333%;
+}
+.foliox_tm_news .news_list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.foliox_tm_news .news_list ul li .image{
+	position: relative;
+	overflow: hidden;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.foliox_tm_news .news_list ul li .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.foliox_tm_news .news_list ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.foliox_tm_news .news_list ul li .details{
+	background-color: #3a2b71;
+	width: 100%;
+	float: left;
+	padding: 28px 35px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+.foliox_tm_news .news_list ul li .meta{
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+.foliox_tm_news .news_list ul li .meta p{
+	font-size: 16px;
+}
+.foliox_tm_news .news_list ul li .meta a{
+	color: var(--extra-color);
+	font-weight: 500;
+	padding-right: 7px;
+}
+.foliox_tm_news .news_list ul li .title{
+	width: 100%;
+	float: left;
+}
+.foliox_tm_news .news_list ul li .title h3{
+	line-height: 1.4;
+}
+.foliox_tm_news .news_list ul li .title a{
+	color: #fff;
+	display: inline-block;
+	font-size: 21px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_news .news_list ul li .title a:hover{
+	color: var(--extra-color);
+}
+.foliox_tm_news .news_hidden_details{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.foliox_tm_modalbox .news_popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_modalbox .news_popup_informations .image{
+	position: relative;
+	margin-bottom: 37px;
+}
+.foliox_tm_modalbox .news_popup_informations .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.foliox_tm_modalbox .news_popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+.foliox_tm_modalbox .news_popup_informations .details{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.foliox_tm_modalbox .news_popup_informations .meta{
+	width: 100%;
+	float: left;
+	margin-bottom: 8px;
+}
+.foliox_tm_modalbox .news_popup_informations .meta p{
+	font-size: 16px;
+}
+.foliox_tm_modalbox .news_popup_informations .meta p a{
+	color: var(--extra-color);
+    font-weight: 500;
+    padding-right: 7px;
+}
+.foliox_tm_modalbox .news_popup_informations .title{
+	width: 100%;
+	float: left;
+}
+.foliox_tm_modalbox .news_popup_informations .title h3{
+	font-size: 22px;
+}
+.foliox_tm_modalbox .news_popup_informations .text{
+	width: 100%;
+	float: left;
+}
+.foliox_tm_modalbox .news_popup_informations .text p{
+	margin-bottom: 15px;
+}
+.foliox_tm_modalbox .news_popup_informations .text p:last-child{
+	margin-bottom: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	15) FOLIOX CONTACT
+/*---------------------------------------------------*/
+
+.foliox_tm_contact{
+	width: 100%;
+	float: left;
+	height: auto;
+	clear: both;
+}
+.foliox_tm_contact .contact_inner{
+	width: 100%;
+	display: flex;
+	margin-top: 80px;
+	margin-bottom: 182px;
+	position: relative;
+}
+.foliox_tm_contact .left{
+	width: 50%;
+}
+.foliox_tm_contact .left ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.foliox_tm_contact .left ul li{
+	margin: 0px 0px 15px 0px;
+}
+.foliox_tm_contact .left ul li:last-child{
+	margin-bottom: 0px;
+}
+.foliox_tm_contact .left .list_inner{
+	display: flex;
+	align-items: center;
+}
+.foliox_tm_contact .left .icon{
+	width: 88px;
+	height: 88px;
+	border-radius: 100%;
+	position: relative;
+	background-color: var(--extra-color);
+}
+.foliox_tm_contact .left .icon i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 24px;
+	color: #fff;
+}
+.foliox_tm_contact .left .short{
+	padding-left: 25px;
+}
+.foliox_tm_contact .left .short h3{
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+.foliox_tm_contact .left .short a{
+	text-decoration: none;
+	color: #b4afc6;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_contact .left .short a:hover{
+	color: var(--extra-color);
+}
+.foliox_tm_contact .right{
+	width: 50%;
+}
+.foliox_tm_contact .fields{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_contact .input_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_contact .input_list ul{
+	margin: 0px 0px 0px -12px;
+	list-style-type: none;
+}
+.foliox_tm_contact .input_list ul li{
+	margin: 0px 0px 12px 0px;
+	width: 50%;
+	float: left;
+	padding-left: 12px;
+}
+.foliox_tm_contact input{
+	width: 100%;
+	height: 58px;
+	padding: 0px 30px;
+	background-color: transparent;
+	border:1px solid rgba(255,255,255,.3);
+	border-radius: 8px;
+	color: var(--main-color);
+	font-size: 18px;
+}
+.foliox_tm_contact input:focus{
+	background-color: transparent;
+	outline: none;
+	border-color: rgba(255,255,255,.5);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+.foliox_tm_contact .message_area{
+	width: 100%;
+	float: left;
+	margin-bottom: 4px;
+}
+.foliox_tm_contact .message_area textarea{
+	width: 100%;
+	height: 200px;
+	padding: 16px 30px 30px 30px !important;
+	background-color: transparent;
+	border:1px solid rgba(255,255,255,.3);
+	border-radius: 8px;
+	color: var(--main-color);
+	font-size: 18px;
+}
+.foliox_tm_contact .message_area textarea:focus{
+	background-color: transparent;
+	outline: none;
+	border-color: rgba(255,255,255,.5);
+}
+.foliox_tm_contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.foliox_tm_contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.foliox_tm_contact .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+
+/*---------------------------------------------------*/
+/*	16) FOLIOX SUBSCRIBE
+/*---------------------------------------------------*/
+
+.foliox_tm_subscribe{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.foliox_tm_subscribe .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #432d92;
+	display: flex;
+	align-items: center;
+	padding: 83px 90px 86px 90px;
+	border-radius: 15px;
+}
+.foliox_tm_subscribe .left{
+	width: 50%;
+	padding-right: 40px;
+}
+.foliox_tm_subscribe .subtitle{
+	display: inline-block;
+	font-size: 21px;
+	font-weight: 500;
+	color: var(--extra-color);
+	margin-bottom: 5px;
+}
+.foliox_tm_subscribe .title{
+	color: #fff;
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+.foliox_tm_subscribe .right{
+	width: 50%;
+	padding-left: 10px;
+}
+.foliox_tm_subscribe .field{
+	width: 100%;
+	position: relative;
+}
+.foliox_tm_subscribe .field input[type="text"]{
+	width: 100%;
+	height: 72px;
+	border-radius: 12px;
+	color: #6f6b80;
+	background-color: #fff;
+	padding-left: 30px;
+}
+.foliox_tm_subscribe .field input[type="text"]:focus{
+	outline: none;
+}
+.foliox_tm_subscribe .field input[type="submit"]{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 72px;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	color: #fff;
+	font-family: var(--font-family-extra);
+	font-size: 18px;
+	text-transform: capitalize;
+	font-weight: 500;
+	background-color: var(--extra-color);
+	padding: 0px 35px;
+}
+
+/*---------------------------------------------------*/
+/*	17) FOLIOX COPYRIGHT
+/*---------------------------------------------------*/
+
+.foliox_tm_copyright{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	padding: 100px 0px;
+}
+.foliox_tm_copyright p{
+	font-family: var(--font-family-extra);
+}
+.foliox_tm_copyright a{
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.foliox_tm_copyright a:hover{
+	color: var(--extra-color);
+}
+
+/*---------------------------------------------------*/
+/*	18) FOLIOX MAGIC CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.cursor-inner {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  z-index: 100;
+  background-color: var(--extra-color);
+  -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+}
+.cursor-inner.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--extra-color);
+  opacity: .3;
+}
+.cursor-outer {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--extra-color);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100;
+  opacity: .5;
+  -webkit-transition: all .08s ease-out;
+  transition: all .08s ease-out;
+}
+.cursor-outer.cursor-hover{opacity: 0;}
+.foliox_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1111;
+}
+
+/*---------------------------------------------------*/
+/*	19) FOLIOX TOTOP
+/*---------------------------------------------------*/
+
+.progressbar{
+    position: fixed;
+	height: 100px;
+    width: 1px;
+	bottom: 25px;
+    right: -25px;
+    background-color: rgba(255,255,255,.2);
+    z-index: 10;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.progressbar.animate{
+	right: 25px;
+}
+.progressbar .line {
+	position: absolute;
+    width: 1px;
+	height: auto;
+    background-color: var(--extra-color);
+}
+.progressbar .text{
+	position: absolute;
+    bottom: 100px;
+    left: 0px;
+    font-size: 13px;
+    transform: rotateZ(90deg);
+    text-transform: uppercase;
+    transform-origin: left;
+    white-space: nowrap;
+}
+.progressbar a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/*---------------------------------------------------*/
+/*	20) FOLIOX MEDIA QUERIES (FOR SMALL DEVICES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1600px) {
+	.container{max-width: 1070px;padding: 0px 20px;}
+	body{font-size: 16px;}
+	.foliox_tm_modalbox .description_wrap{padding: 40px;}
+	.foliox_tm_modalbox .description_wrap:before{height: 40px;}
+	.foliox_tm_modalbox .description_wrap:after{height: 40px;}
+	.foliox_tm_modalbox .box_inner{top: 50px;bottom: 50px;width: 800px;}
+	.foliox_tm_modalbox .close{margin-left: 20px;}
+	.foliox_tm_header{padding: 30px 0px;}
+	.foliox_tm_header.animate{padding: 20px 0px;}
+	.foliox_tm_header .logo img{max-width: 160px;max-height: 60px;}
+	.foliox_tm_header.animate .logo img{max-width: 140px;}
+	.foliox_tm_header .menu ul li{margin-right: 30px;}
+	.foliox_tm_hero .name{font-size: 75px;margin-bottom: 14px;}
+	.foliox_tm_hero .job{font-size: 20px;margin-bottom: 35px;}
+	.foliox_tm_button a{padding: 15px 40px;}
+	.foliox_tm_hero .right img{max-width: 400px;max-height: 400px;}
+	.foliox_tm_features .list ul li .title{font-size: 21px;}
+	.foliox_tm_main_title h3{font-size: 40px;}
+	.foliox_tm_about .big_image img{max-width: 380px;}
+	.foliox_tm_about .small_image{margin-right: -145px;}
+	.foliox_tm_about .small_image .in img{min-width: 280px;max-width: 280px;}
+	.foliox_tm_about .experience .inner h3{font-size: 45px;}
+	.foliox_tm_about .experience .inner span{font-size: 16px;line-height: 20px;padding-left: 14px;}
+	.foliox_tm_about .experience .inner:before{width: 8px;height: 50px;}
+	.foliox_tm_about .experience .inner{padding-left: 22px;}
+	.foliox_tm_about .experience{left: 165px;margin-top: 20px;}
+	.foliox_tm_about .badge{width: 90px;height: 90px;top: 105px;}
+	.foliox_tm_about .badge .svg{width: 45px;height: 45px;}
+	.foliox_tm_about .right{padding-left: 50px;top: 15px;}
+	.foliox_tm_about .right .item li{margin-bottom: 7px;}
+	.foliox_tm_about .right .title{margin-bottom: 20px;}
+	.foliox_tm_counter .counter_list ul li h3{font-size: 55px;}
+	.foliox_tm_counter .counter_list ul li .title{font-size: 16px;padding-left: 18px;line-height: 24px;}
+	.foliox_tm_counter .counter_list ul li .list_inner{padding: 50px 70px 40px 70px;}
+	.foliox_tm_services .list ul li .title{font-size: 21px;}
+	.foliox_tm_services .list ul li .icon{margin-bottom: 35px;}
+	.foliox_tm_services .list ul li .list_inner{padding: 95px 30px 60px 30px;}
+	.foliox_tm_testimonials .text p{font-size: 27px;}
+	.foliox_tm_news .news_list ul li .title a{font-size: 19px;}
+	.foliox_tm_contact .left .short h3{font-size: 28px;margin-bottom: 1px;}
+	.foliox_tm_subscribe .subtitle{font-size: 19px;}
+	.foliox_tm_subscribe .title{font-size: 38px;}
+	.foliox_tm_subscribe .title{margin-bottom: 5px;}
+	.foliox_tm_subscribe .field input[type="text"]{font-size: 16px;}
+	.foliox_tm_subscribe .field input[type="submit"]{font-size: 16px;}
+	.foliox_tm_copyright {padding: 80px 0px;}
+}
+@media (max-width: 1200px) {
+	.foliox_tm_modalbox .box_inner{width: 500px;}
+	.foliox_tm_modalbox .description_wrap{padding: 35px;}
+	.foliox_tm_modalbox .description_wrap:before{height: 35px;}
+	.foliox_tm_modalbox .description_wrap:after{height: 35px;}
+	.foliox_tm_modalbox .main_details{flex-direction: column;align-items: baseline;}
+	.foliox_tm_modalbox .main_details .textbox{width: 100%;padding: 0px;margin-bottom: 40px;}
+	.foliox_tm_modalbox .main_details .detailbox{width: 100%;padding: 0px;}
+	.foliox_tm_modalbox .additional_images ul{margin: 0px;}
+	.foliox_tm_modalbox .additional_images ul li{width: 100% !important;padding: 0px;}
+	.foliox_tm_modalbox .popup_details .top_image{margin-bottom: 25px;}
+	.foliox_tm_modalbox .news_popup_informations .image{margin-bottom: 25px;}
+}
+@media (max-width: 1040px) {
+	.foliox_tm_header{display: none;}
+	.foliox_tm_mobile_menu{display: block;}
+	.foliox_tm_hero .content{flex-direction: column-reverse;text-align: center;justify-content: center;}
+	.foliox_tm_hero .right{width: 100%;padding-left: 0px;margin-bottom: 30px;}
+	.foliox_tm_hero .right img{max-width: 200px;max-height: 200px;}
+	.foliox_tm_hero .left{width: 100%;}
+	.foliox_tm_hero .name{font-size: 65px;margin-bottom: 12px;}
+	.foliox_tm_hero .job{font-size: 19px;margin-bottom: 35px;}
+	.foliox_tm_button a{padding: 13px 38px;}
+	.foliox_tm_features .list ul li{width: 50%;}
+	.foliox_tm_main_title span{font-size: 19px;}
+	.foliox_tm_main_title h3{font-size: 35px;}
+	.foliox_tm_about .wrapper{flex-direction: column;}
+	.foliox_tm_about .left{width: 100%;margin-bottom: 60px;}
+	.foliox_tm_about .right{width: 100%;padding-left: 0px;top: 0px;}
+	.foliox_tm_about .badge{display: none;}
+	.foliox_tm_about .experience{display: none;}
+	.foliox_tm_about .small_image .in{display: none;}
+	.foliox_tm_about .big_image{float: left;}
+	.foliox_tm_about{margin-bottom: 165px;}
+	.foliox_tm_counter .counter_list ul li{width: 33.3333%;}
+	.foliox_tm_skills .list{flex-direction: column;}
+	.foliox_tm_skills .left{width: 100%;padding-right: 0px;margin-bottom: 7px;}
+	.foliox_tm_skills .right{width: 100%;padding-left: 0px;}
+	.foliox_tm_services .list ul li{width: 50%;}
+	.foliox_tm_resume .wrapper{flex-direction: column;}
+	.foliox_tm_resume .left{width: 100%;padding-right: 0px;margin-bottom: 70px;}
+	.foliox_tm_resume .right{width: 100%;padding-left: 0px;}
+	.foliox_tm_portfolio .portfolio_list ul li{width: 50%;}
+	.foliox_tm_testimonials .text p{font-size: 27px;}
+	.foliox_tm_news .news_list ul li{width: 50%;}
+	.foliox_tm_contact .contact_inner{flex-direction: column;}
+	.foliox_tm_contact .left{width: 100%;margin-bottom: 50px;}
+	.foliox_tm_contact .right{width: 100%;}
+	.foliox_tm_subscribe .inner{flex-direction: column;align-items: baseline;padding-left: 30px;padding-right: 30px;}
+	.foliox_tm_subscribe .left{width: 100%;padding-right: 0px;margin-bottom: 40px;}
+	.foliox_tm_subscribe .right{width: 100%;padding-left: 0px;}
+	.foliox_tm_subscribe .subtitle{font-size: 19px;}
+	.foliox_tm_subscribe .title{font-size: 36px;}
+	.foliox_tm_subscribe .field input[type="submit"]{font-size: 16px;}
+	.foliox_tm_subscribe .field input[type="text"]{font-size: 16px;}
+}
+@media (max-width: 768px) {
+	.foliox_tm_hero .name{font-size: 50px;margin-bottom: 8px;}
+	.foliox_tm_hero .job{font-size: 17px;}
+	.foliox_tm_features .list ul{margin-left: 0px;}
+	.foliox_tm_features .list ul li{width: 100%;padding-left: 0px;}
+	.foliox_tm_features .list ul li .list_inner{padding: 40px;}
+	.foliox_tm_features .list ul li .svg{width: 55px;height: 55px;margin-bottom: 25px;}
+	.foliox_tm_features .list ul li .title{margin-bottom: 18px;}
+	.foliox_tm_main_title span{font-size: 17px;}
+	.foliox_tm_main_title h3{font-size: 29px;}
+	.foliox_tm_about .right .list > ul > li{border: none;width: 100%;}
+	.foliox_tm_about .right .item:first-child{padding-bottom: 0px;}
+	.foliox_tm_about .right .list > ul{padding-bottom: 25px;}
+	.foliox_tm_counter .counter_list ul li{width: 50%;}
+	.foliox_tm_services .list ul{margin: 0px;}
+	.foliox_tm_services .list ul li{width: 100%;padding-left: 0px;}
+	.foliox_tm_services .list ul li .icon .svg{width: 55px;height: 55px;}
+	.foliox_tm_services .list ul li .icon{margin-bottom: 33px;}
+	.resume_list ul li .icon{width: 65px;height: 65px;}
+	.resume_list ul li .icon .svg{width: 30px;height: 30px;}
+	.resume_list ul:before{left: 32.5px;}
+	.resume_list ul li .list_inner{padding-left: 95px;}
+	.resume_list .resume_title h3{font-size: 22px;}
+	.foliox_tm_resume .title h3{font-size: 30px;}
+	.foliox_tm_portfolio .portfolio_list ul{margin: 0px;}
+	.foliox_tm_portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
+	.foliox_tm_testimonials .text p{font-size: 22px;}
+	.foliox_tm_testimonials .icon .svg{width: 65px;height: 65px;}
+	.foliox_tm_testimonials .detail h3{font-size: 21px;}
+	.foliox_tm_news .news_list ul{margin: 0px;}
+	.foliox_tm_news .news_list ul li{width: 100%;padding-left: 0px;}
+	.foliox_tm_contact .input_list ul{margin: 0px;}
+	.foliox_tm_contact .input_list ul li{width: 100%;padding-left: 0px;}
+	.foliox_tm_contact .left .icon{width: 70px;height: 70px;}
+	.foliox_tm_contact .left .short h3{font-size: 24px;margin-bottom: 1px;}
+	.foliox_tm_contact input{font-size: 16px;}
+	.foliox_tm_contact .message_area textarea{font-size: 16px;}
+	.foliox_tm_modalbox .box_inner{width: 300px;}
+	.foliox_tm_modalbox .portfolio_main_title h3{font-size: 19px;margin-bottom: 2px;}
+	.foliox_tm_modalbox .description_wrap{padding: 20px;}
+	.foliox_tm_modalbox .description_wrap:before{height: 20px;}
+	.foliox_tm_modalbox .description_wrap:after{height: 20px;}
+	.foliox_tm_modalbox .close{left: auto;right: 0px;margin-left: 0px;top: -40px;}
+	.foliox_tm_modalbox .close a{width: 30px;height: 30px;}
+	.foliox_tm_modalbox .news_popup_informations .details h3{font-size: 19px;}
+	.foliox_tm_subscribe .title{font-size: 30px;}
+}
+@media (max-width: 480px) {
+	body{font-size: 15px;}
+	.foliox_tm_counter .counter_list ul{margin: 0px;}
+	.foliox_tm_counter .counter_list ul li{padding-left: 0px;width: 100%;}
+	.foliox_tm_subscribe .field input[type="text"]{font-size: 15px;}
+	.foliox_tm_subscribe .field input[type="submit"]{font-size: 15px;}
+	.foliox_tm_counter .counter_list ul li .list_inner{padding: 50px 40px 40px 40px;}
+	.foliox_tm_testimonials .text p{font-size: 18px;}
+}
