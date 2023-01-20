@@ -1,6 +1,8 @@
 # Freelancer Resume/CV Website Template - Foliox - Bootstrap 4, jQuery
 Freelancer Resume/CV Website Template - Foliox - Bootstrap 4
 
+https://freelance-resume-foliox.vercel.app/
+
 ![image](https://user-images.githubusercontent.com/117616805/213669885-defc2085-c1e5-4c9b-94b6-cc17afd4bf4c.png)
 
 ![image](https://user-images.githubusercontent.com/117616805/213669929-750e033c-f526-44e6-8499-015a6e21cf5c.png)
