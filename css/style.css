@@ -801,7 +801,7 @@ h6 {
 .foliox_tm_about .right .item {
   margin: 0px;
   list-style-type: none;
-  padding: 25px 35px;
+  padding: 15px 25px;
 }
 .foliox_tm_about .right .item li {
   margin: 0px 0px 11px 0px;
@@ -1048,8 +1048,13 @@ h6 {
   background-color: #3a2b71;
   border-radius: 10px;
   text-align: center;
-  padding: 105px 65px 70px 65px;
+  padding: 65px 25px 45px 25px;
 }
+
+.foliox_tm_services .list ul li .list_inner .text {
+  text-align: left;
+}
+
 .foliox_tm_services .list ul li .icon {
   display: inline-block;
   position: relative;
@@ -2229,8 +2234,10 @@ input[type="number"] {
   height: 6px;
   z-index: 100;
   background-color: var(--extra-color);
-  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .cursor-inner.cursor-hover {
   margin-left: -40px;
